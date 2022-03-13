@@ -9,21 +9,19 @@
 header {
     display: flex;
     justify-content: flex-start;
-    padding: 2rem;
+    padding: 1rem;
     background-color: rgb(0, 0, 0);
-}
-
-header svg {
-    margin-left: 40px;
+    height: 5vh;
+    width: 100%;
 }
 
 .icons {
     display: flex;
-    margin-right: 2rem;
 }
 
 .icons li {
     list-style: none;
+    margin-right: 2rem;
 }
 
 .fa-solid {
@@ -41,7 +39,7 @@ header svg {
     background-repeat: no-repeat;
     background-color: black;
     width: 100vw;
-    height: 50vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -51,7 +49,7 @@ header svg {
 .hero h1 {
     color: white;
     font-size: 5rem;
-    padding-bottom: 15px;
+    padding-bottom: 4rem;
 }
 
 .hero .intro-h2 {
@@ -59,7 +57,8 @@ header svg {
     text-align: center;
     font-size: 3rem;
     font-weight: 200;
-    padding-bottom: 45px;
+    padding-bottom: 4rem;
+    
 }
 
 .button {
@@ -76,6 +75,7 @@ header svg {
     height: auto;
     display: flex;
     justify-content: center;
+    align-content: space-between;
     flex-direction: column;
     align-items: center;
 }
@@ -88,14 +88,13 @@ header svg {
 .about {
     background-color: white;
     width: 100%;
-    height: 50vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: left;
     padding: 3rem 3em 3rem 3rem;
-    margin-top: 5rem;
     margin-bottom: 5rem;
     /*background-image: url(./pictures/1KJdev.png);*/
     background-size: 90% 90%;
@@ -106,8 +105,8 @@ header svg {
 .about-h2 {
     align-self: flex-start;
     margin-bottom: 1rem;
-    font-size: 2.5rem;
-    color: black;
+    font-size: 5rem;
+    color: #BF7396;
 }
 
 .about p {
@@ -127,6 +126,7 @@ header svg {
     justify-content: space-between;
     margin-top: 1rem;
     flex-wrap: wrap;
+    padding-top: 5rem;
 }
 
 .about li {
@@ -144,36 +144,92 @@ header svg {
 }
 
 .about li:hover {
-    box-shadow: #74475C;
+    background-image: linear-gradient(#BF7396, #f1f1f1, #F2A7A0);
+    background-color: rgba(0, 0, 0, 0);
+    background-repeat: none;
+    color: black;
+    font-weight: bold;
 }
 
 /* About Styling End*/
+
+/********************/
+
+/* Portfolio Styling Start*/
 
 .portfolio {
     background-color: black;
     height: 100vh;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     flex-direction: column;
 }
 
 .portfolio h2 {
     color: white;
-    font-size: 4rem;
+    font-size: 5rem;
     padding: 3rem;
+    text-align: center;
 
 }
 
 .portfolio_cards {
-    background-color: green;
+    background-color: white;
     height: 300px;
     width: 300px;
 }
 
-.contact {
-    background-color: green;
+.portfolio_cards img {
+    width: 100%;
+    height: 100%;
 }
+
+.contact h2::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: rgb(255, 255, 255);
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+.contact {
+    background-color: black;
+    height: 100vh;
+    color: white;
+}
+
+.contact h2 {
+    font-size: 5rem;
+    position: relative;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+.contact p {
+    padding-bottom: 3rem;
+}
+
+.contact li {
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.git {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.linkedin {
+    display: flex;
+    align-items: center;
+}
+
 
 footer {
     background-color: grey;
+    text-align: center;
 }
