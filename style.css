@@ -15,12 +15,13 @@ header {
     width: 100%;
 }
 
+
 .icons {
     display: flex;
 }
 
 .icons li {
-    list-style: none;
+    list-style: none; 
     margin-right: 2rem;
 }
 
@@ -34,11 +35,11 @@ header {
 .hero {
     background: linear-gradient(rgba(0, 0, 0, 0), #000), url(./pictures/greg-rakozy-oMpAz-DN-9I-unsplash.jpg);
     /* background-image: url(./pictures/arthur-smouk-A8Ipu4sdsM0-unsplash.jpg); */
-    background-size: 100vh 100vw;
+    background-size: 100vh 100%;
     /* background-position: 60% 69%; */
     background-repeat: no-repeat;
     background-color: black;
-    width: 100vw;
+    width: 100%;
     height: 95vh;
     display: flex;
     justify-content: center;
@@ -68,6 +69,7 @@ header {
     color: white;
     padding: 8px 40px 8px 40px;
     font-size: 2.5rem;
+    text-decoration: none;
 }
 
 .intro {
@@ -88,7 +90,6 @@ header {
 .about {
     background-color: white;
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -159,9 +160,17 @@ header {
 
 .portfolio {
     background-color: black;
-    height: 100vh;
+    width: 100%;
+    padding: 3rem 3rem 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.portfolio-flex {
     display: flex;
     justify-content: space-evenly;
+    align-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -169,15 +178,14 @@ header {
 .portfolio h2 {
     color: white;
     font-size: 5rem;
-    padding: 3rem;
-    text-align: center;
-
+    margin-bottom: 5rem;
 }
 
 .portfolio_cards {
     background-color: white;
-    height: 300px;
-    width: 300px;
+    height: 20rem;
+    width: 20rem;
+    margin: 3rem;
 }
 
 .portfolio_cards img {
@@ -185,7 +193,13 @@ header {
     height: 100%;
 }
 
-.contact h2::before {
+/* Portfolio Styling End*/
+
+/********************/
+
+/* Contact Styling Start */
+
+.contact::before {
     content: "";
     display: block;
     width: 100%;
@@ -197,19 +211,25 @@ header {
 }
 .contact {
     background-color: black;
-    height: 100vh;
     color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
 }
 
 .contact h2 {
     font-size: 5rem;
-    position: relative;
     padding-top: 3rem;
     padding-bottom: 3rem;
+    margin: 2rem;
 }
 
 .contact p {
     padding-bottom: 3rem;
+    margin: 2rem;
+    font-size: 1.4rem;
 }
 
 .contact li {
@@ -220,7 +240,10 @@ header {
 .git {
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
+}
+
+.git ul, .linkedin ul {
+    display: flex;
 }
 
 .linkedin {
@@ -228,8 +251,139 @@ header {
     align-items: center;
 }
 
+.linkedin, .git {
+    margin: 2rem;
+    font-size: 1rem;
+}
+
+.bg {
+    background-color: #e9e9e978;
+    padding: 1rem;
+}
+
+form {
+    margin: 4rem 2rem 2rem 2rem;
+}
+
+form label {
+    font-size: 2rem;
+}
+
+input {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 70%;
+    height: 3rem;
+}
+
+textarea {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    border-radius: 8px;
+    padding-top: 10px;
+    padding-left: 10px;
+    resize: none;
+}
+
+input[type=submit] {
+    margin-top: 2rem;
+    background-color: #74475C;
+    color: #f0f0f0;
+    height: 3.5rem;
+    font-size: 2rem;
+}
+
+/* Contact Styling End */
+
+/********************/
+
+/* Footer Styling Start */
 
 footer {
     background-color: grey;
     text-align: center;
+    padding: 1rem;
+}
+
+/* Footer Styling End */
+
+/* Media Queries */
+
+
+/* iPhone 8 */
+@media screen and (min-width: 374px) {
+    .about li {
+        margin-right: 3rem;
+    }
+}
+
+/* iPhone 8 plus */
+@media screen and (min-width: 374px) {
+    .about li {
+        margin-right: 4rem;
+    }
+}
+
+/* iPad mini */
+@media screen and (min-width: 767px) {
+
+    .hero h1 {
+        font-size: 12rem;
+    }
+
+    .intro-h2 {
+        font-size: 5rem;
+    }
+
+    .button {
+        font-size: 3.5rem;
+
+    }
+
+    .about li {
+        margin-right: 5rem;
+        font-size: 3.5rem;
+        padding-top: 6rem;
+        width: 20rem;
+        height: 20rem;
+    }
+
+    .about-h2 {
+        font-size: 9rem;
+    }
+
+    .about p {
+        font-size: 3rem;
+    }
+
+    .portfolio h2 {
+        font-size: 9rem;
+    }
+
+    .portfolio_cards {
+        width: 30rem;
+        height: 30rem;
+    }
+
+    .contact h2 {
+        font-size: 9rem;
+    }
+
+    .contact p {
+        font-size: 2.2rem;
+    }
+
+    .git, .linkedin {
+        font-size: 2rem;
+    }
+
+    form label {
+        font-size: 2.5rem;
+    }
+
+    input {
+        height: 4rem;
+    }
+
 }
